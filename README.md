@@ -22,39 +22,39 @@ type=transport
 protocol=udp
 bind=0.0.0.0
 
-[6001]
+[798020020001]
 type=endpoint
 context=internal
 disallow=all
 allow=ulaw
-auth=6001
-aors=6001
+auth=798020020001
+aors=798020020001
 
-[6001]
+[798020020001]
 type=auth
 auth_type=userpass
-password=6001
-username=6001
+password=798020020001
+username=798020020001
 
-[6001]
+[798020020001]
 type=aor
 max_contacts=1
 
-[6002]
+[798020020002]
 type=endpoint
 context=internal
 disallow=all
 allow=ulaw
-auth=6002
-aors=6002
+auth=798020020002
+aors=798020020002
 
-[6002]
+[798020020002]
 type=auth
 auth_type=userpass
-password=6002
-username=6002
+password=798020020002
+username=798020020002
 
-[6002]
+[798020020002]
 type=aor
 max_contacts=1
 EOF
@@ -62,7 +62,7 @@ EOF
 echo "Настраиваем /etc/asterisk/extensions.conf..."
 sudo tee /etc/asterisk/extensions.conf > /dev/null <<'EOF'
 [internal]
-exten => _600X,1,Dial(PJSIP/${EXTEN},20)
+exten => _79802002000X,1,Dial(PJSIP/${EXTEN},20)
 EOF
 
 echo "Запускаем Asterisk..."
